@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --strength: #FEAE36;
+    --stretch: #36C3FE;
+    --cardio: #FE367E;
+    --rest: #7C7C7C;
+    --core: #A583FF;
+    --white: #ffffff;
+    --black: #000000;
+    --dark-gray: #222222;
+    --light-gray: #C4C4C4;
+    --main-padding: 20px;
+    --x-small: 12px;
+    --small: 14px;
+    --default: 18px;
+    --large: 24px;
+    --x-large: 36px;
+    --xx-large: 72px;
+    --default-radius: 8px;
+    --large-radius: 20px;
+    --round-radius: 50%;
+}
+
+.strength-font {
+    color: var(--strength);
+}
+.stretch-font {
+    color: var(--stretch);
+}
+.cardio-font {
+    color: var(--cardio);
+}
+.rest-font {
+    color: var(--rest);
+}
+.core-font {
+    color: var(--core);
+}
+
+.strength-background {
+    background: var(--strength);
+}
+.stretch-background {
+    background: var(--stretch);
+}
+.cardio-background {
+    background: var(--cardio);
+}
+.rest-background {
+    background: var(--rest);
+}
+.core-background {
+    background: var(--core);
+}
+
+body {
+    background: var(--dark-gray);
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+}
+
+#main-container {
+    max-width: 500px;
+    margin: auto;
+}
+
+header {
+    background: var(--black);
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--main-padding);
+}
+
+header img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+    border-radius: var(--round-radius);
+    margin-left: 15px;
+}
+
+#up-coming-workout {
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/asphalt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+}
+
+.next-workout-card {
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    border-radius: var(--large-radius);
+}
+
+.name-next {
+    font-size: var(--default);
+    font-weight: 800;
+    color: var(--dark-gray);
+    text-align: center;
+}
+
+.next-workout-day {
+    background: var(--dark-gray);
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 50%;
+    margin: -20px auto 10px auto;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    border-radius: var(--default-radius);
+    font-size: var(--x-small);
+}
+
+.next-workout-day img {
+    display: inline-block;
+}
