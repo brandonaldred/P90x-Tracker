@@ -203,6 +203,7 @@ header img {
 .workout-icon-top img {
     display: block;
     width: 80%;
+    padding: 10px;
     margin: auto;
 }
 
