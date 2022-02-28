@@ -236,6 +236,11 @@ header img {
     box-shadow: var(--drop-shadow);
 }
 
+.phase-workouts li:hover {
+    filter: brightness(110%);
+    cursor: pointer;
+}
+
 .phase-workouts li img:nth-child(1) {
     height: 90px;
     width: 100px;
@@ -380,4 +385,8 @@ header img {
 .qty-quick-select ul {
     display: flex;
     justify-content: space-around;
+}
+
+.exercise-incomplete {
+    filter: brightness(40%);
 }
