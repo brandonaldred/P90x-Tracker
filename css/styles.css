@@ -207,7 +207,7 @@ header img {
 }
 
 .phase-workouts {
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
@@ -246,7 +246,7 @@ header img {
 }
 
 .phase-workouts li div {
-    width: 50%;
+    width: 65%;
 }
 
 .phase-workouts li div p{
@@ -254,7 +254,9 @@ header img {
     font-size: var(--small);
 }
 
-
+.exercise-lower-list {
+    padding-left: 20px;
+}
 
 .workout-header {
     padding: 25px var(--main-padding);
@@ -304,17 +306,15 @@ header img {
 }
 
 .counter-container {
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin: 20px 0;
     display: flex;
     align-items: center;
 }
 
 #exercise-container a {
-    margin-top: 10px;
+    margin-top: 75px;
     display: block;
     color: var(--dark-gray);
-    background: var(--strength);
     text-decoration: none;
     text-transform: uppercase;
     padding: 20px 50px;
@@ -322,6 +322,10 @@ header img {
     text-align: center;
     font-size: var(--default);
     font-weight: 500;
+}
+
+#exercise-container a:hover {
+    filter: brightness(90%);
 }
 
 .weight-reps {
@@ -357,4 +361,21 @@ header img {
 
 .increase {
     border-bottom: solid 3px var(--dark-gray);
+}
+
+.qty-quick-select {
+    padding: 20px 0;
+}
+
+.qty-quick-select li {
+    display: inline-block;
+    border: 1px solid var(--rest);
+    padding: 10px 20px;
+    border-radius: var(--default-radius);
+    color: var(--rest);
+}
+
+.qty-quick-select ul {
+    display: flex;
+    justify-content: space-around;
 }
