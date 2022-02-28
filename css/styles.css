@@ -238,8 +238,9 @@ header img {
 
 .phase-workouts li img:nth-child(1) {
     height: 90px;
-    width: 80px;
+    width: 100px;
     padding: 25px;
+    margin-right: 20px;
 }
 
 .phase-workouts li img:nth-child(2) {
