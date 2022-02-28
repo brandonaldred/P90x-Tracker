@@ -178,6 +178,11 @@ header img {
     text-align: center;
 }
 
+.workout-square a {
+    text-decoration: none;
+    color: var(--white);
+}
+
 .workout-square h3 {
     text-transform: uppercase;
     margin-bottom: 10px;
