@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --strength: #FEAE36;
+    --stretch: #36C3FE;
+    --cardio: #FE367E;
+    --rest: #7C7C7C;
+    --core: #A583FF;
+    --white: #ffffff;
+    --black: #000000;
+    --dark-gray: #222222;
+    --gray: #323232;
+    --light-gray: #C4C4C4;
+    --main-padding: 20px;
+    --x-small: 12px;
+    --small: 14px;
+    --default: 18px;
+    --large: 24px;
+    --x-large: 36px;
+    --xx-large: 72px;
+    --default-radius: 8px;
+    --large-radius: 20px;
+    --round-radius: 50%;
+    --drop-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.x-small-font {
+    font-size: var(x-small);
+}
+
+.small-font {
+    font-size: var(small);
+}
+
+.default-font {
+    font-size: var(default);
+}
+
+.large-font {
+    font-size: var(large);
+}
+
+.x-large-font {
+    font-size: var(x-large);
+}
+
+.xx-large-font {
+    font-size: var(xx-large);
+}
+
+
+/* Start: Classes to be implemented inline */
+.strength-font {
+    color: var(--strength);
+}
+.stretch-font {
+    color: var(--stretch);
+}
+.cardio-font {
+    color: var(--cardio);
+}
+.rest-font {
+    color: var(--rest);
+}
+.core-font {
+    color: var(--core);
+}
+
+.dark-gray-font {
+    color: var(--dark-gray);
+}
+
+.strength-background {
+    background: var(--strength);
+}
+.stretch-background {
+    background: var(--stretch);
+}
+.cardio-background {
+    background: var(--cardio);
+}
+.rest-background {
+    background: var(--rest);
+}
+.core-background {
+    background: var(--core);
+}
+.invert {
+    filter: invert(100%);
+}
+
+/* End: Classes to be implemented inline */
+
+body {
+    background: var(--dark-gray);
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+}
+
+#main-container {
+    max-width: 500px;
+    margin: auto;
+}
+
+header {
+    background: var(--black);
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--main-padding);
+}
+
+header img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+    border-radius: var(--round-radius);
+    margin-left: 15px;
+}
+
+#up-coming-workout {
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/asphalt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    align-content: center;
+}
+
+.next-workout-card {
+    margin: auto;
+    width: 70%;
+    height: auto;
+    border-radius: var(--large-radius);
+    padding: 0 30px 30px 30px;
+}
+
+.next-workout-card h2 {
+    text-align: center;
+    margin: 10px auto 45px auto;
+}
+
+.next-workout-day {
+    background: var(--dark-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: var(--default-radius);
+    position: relative;
+    top: -15px;
+    font-size: var(--x-small);
+    line-height: 1.5em;
+    width: 75%;
+    margin: auto;
+}
+
+.next-workout-day img {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    height: auto;
+}
+
+.workout-square {
+    background: var(--gray);
+    border-radius: var(--large-radius);
+    padding: 0 30px 60px 30px;
+    box-shadow: var(--drop-shadow);
+    text-align: center;
+}
+
+.workout-square a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.workout-square h3 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.workout-square p {
+    text-transform: uppercase;
+    font-size: var(--x-small)
+}
+
+.workout-icon-top {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--large-radius);
+    display: grid;
+    align-content: center;
+    margin: 0 auto 20px auto;
+    position: relative;
+    top: -25px;
+    box-shadow: var(--drop-shadow);
+}
+
+.workout-icon-top img {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+}
+
+.phase-workouts {
+    width: 90%;
+    margin: auto;
+}
+
+.phase-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--rest);
+    text-transform: uppercase;
+    font-weight: normal;
+    border-bottom: 1px solid var(--rest);
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+
+.phase-workouts li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--gray);
+    height: 85px;
+    border-radius: var(--large-radius);
+    overflow: hidden;
+    margin: 30px 0;
+    padding-right: 20px;
+    box-shadow: var(--drop-shadow);
+}
+
+.phase-workouts li:hover {
+    filter: brightness(110%);
+    cursor: pointer;
+}
+
+.phase-workouts li img:nth-child(1) {
+    height: 90px;
+    width: 100px;
+    padding: 25px;
+    margin-right: 20px;
+}
+
+.phase-workouts li img:nth-child(2) {
+    margin: 0 20px;
+}
+
+.phase-workouts li div {
+    width: 80%;
+}
+
+.phase-workouts li div p{
+    color: var(--light-gray);
+    font-size: var(--small);
+}
+
+.exercise-lower-list {
+    padding-left: 20px;
+}
+
+.workout-header {
+    padding: 25px var(--main-padding);
+}
+
+.workout-header h2{
+    font-size: var(--large);
+    text-transform: uppercase;
+}
+
+.workout-header p {
+    text-transform: uppercase;
+    font-size: var(--x-small);
+    padding-top:  5px;
+}
+
+.workout-header-icon {
+    margin: 0 10px 0 50px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+#exercise-container {
+    width: 100%;
+    padding: var(--main-padding);
+}
+
+.exercise-header {
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.exercise-number {
+    font-size: var(--x-large);
+    font-weight: 800;
+    margin-right: 20px;
+}
+
+.exercise-muscle-group {
+    font-size: var(--x-small);
+    color: var(--rest);
+
+}
+
+.counter-container {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+#exercise-container a {
+    margin-top: 75px;
+    display: block;
+    color: var(--dark-gray);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 50px;
+    border-radius: var(--default-radius);
+    text-align: center;
+    font-size: var(--default);
+    font-weight: 500;
+}
+
+#exercise-container a:hover {
+    filter: brightness(90%);
+}
+
+.weight-reps {
+    width: 50%;
+    margin-left: 20px;
+}
+
+.weight-reps p:nth-child(2) {
+    font-size: var(--x-small);
+    text-transform: uppercase;
+    color: var(--rest);
+    margin-top: 10px;
+}
+
+.count {
+    font-size: var(--xx-large);
+    font-weight: 800;
+    border-bottom: solid 1px var(--white);
+}
+
+.button-container {
+    width: 50px;
+    background: var(--rest);
+    border-radius: var(--default-radius);
+    text-align: center;
+}
+
+.button-container div {
+    padding: 10px;
+    font-size: var(--large);
+    color: var(--dark-gray);
+}
+
+.increase {
+    border-bottom: solid 3px var(--dark-gray);
+}
+
+.qty-quick-select {
+    padding: 20px 0;
+}
+
+.qty-quick-select li {
+    display: inline-block;
+    border: 1px solid var(--rest);
+    padding: 10px 20px;
+    border-radius: var(--default-radius);
+    color: var(--rest);
+}
+
+.qty-quick-select li:hover {
+    cursor: pointer;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.qty-quick-select ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.exercise-incomplete {
+    filter: brightness(40%);
+}
