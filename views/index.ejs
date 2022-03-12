@@ -14,28 +14,28 @@
     <div id="main-container">
         <header>
             <p>P90x Tracker</p>
-            <p>Anna<img src="img/anna.jpg" /></p>
+            <p><%- anna.firstName -%><img src="img/anna.jpg" /></p>
         </header>
         <div id="up-coming-workout">
             <div class="next-workout-card strength-background">
                 <div class="next-workout-day">
-                    <p>Phase #</p>
-                    <p><img src="img/calendar-icon.svg" >Day #</p>
+                    <p>Phase <%- anna.progress.currentPhase -%></p>
+                    <p><img src="img/calendar-icon.svg" >Day <%- anna.progress.currentDay -%></p>
                 </div>
-                <h2 class="dark-gray-font large-font">Anna, here's your <br />next workout:</h2>
+                <h2 class="dark-gray-font large-font"><%- anna.firstName -%>, here's your <br />next workout:</h2>
                 <div class="workout-square">
                     <div class="strength-background workout-icon-top">
                         <img src="img/strength-icon.svg" />
                     </div>
                     <a href="workout.html">
-                        <h3 class="strength-font">Chest & Back</h3>
+                        <h3 class="strength-font"><%- schedule[anna.progress.currentWeek - 1][0].workouts[anna.progress.currentDay - 1] %></h3>
                         <p>Start Workout ></p>
                     </a>
                 </div>
             </div>
         </div>
         <div class="phase-workouts">
-            <h3 class="phase-header">Phase 1 | Week 1 - 3 <img src="img/filter-icon.svg" /></h3>
+            <h3 class="phase-header">Phase <%- anna.progress.currentPhase %> | Week <%- anna.progress.currentWeek %> <img src="img/filter-icon.svg" /></h3>
             <ul>
                 <li>
                     <img class="strength-background" src="img/strength-icon.svg" />
