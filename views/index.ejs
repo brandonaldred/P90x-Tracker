@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P90x Workout Tracker</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -14,84 +14,84 @@
     <div id="main-container">
         <header>
             <p>P90x Tracker</p>
-            <p><%- anna.firstName -%><img src="img/anna.jpg" /></p>
+            <p><%- user[0].firstName -%><img src="<%- user[0].profileImage -%>" /></p>
         </header>
         <div id="up-coming-workout">
             <div class="next-workout-card strength-background">
                 <div class="next-workout-day">
-                    <p>Phase <%- anna.progress.currentPhase -%></p>
-                    <p><img src="img/calendar-icon.svg" >Day <%- anna.progress.currentDay -%></p>
+                    <p>Phase <%- user[0].progress.currentPhase -%></p>
+                    <p><img src="/img/calendar-icon.svg" >Day <%- user[0].progress.currentDay -%></p>
                 </div>
-                <h2 class="dark-gray-font large-font"><%- anna.firstName -%>, here's your <br />next workout:</h2>
+                <h2 class="dark-gray-font large-font"><%- user[0].firstName -%>, here's your <br />next workout:</h2>
                 <div class="workout-square">
                     <div class="strength-background workout-icon-top">
-                        <img src="img/strength-icon.svg" />
+                        <img src="/img/strength-icon.svg" />
                     </div>
                     <a href="workout.html">
-                        <h3 class="strength-font"><%- schedule[anna.progress.currentWeek - 1][0].workouts[anna.progress.currentDay - 1] %></h3>
+                        <h3 class="strength-font">Workout</h3>
                         <p>Start Workout ></p>
                     </a>
                 </div>
             </div>
         </div>
         <div class="phase-workouts">
-            <h3 class="phase-header">Phase <%- anna.progress.currentPhase %> | Week <%- anna.progress.currentWeek %> <img src="img/filter-icon.svg" /></h3>
+            <h3 class="phase-header">Phase <%- user[0].progress.currentPhase %> | Week <%- user[0].progress.currentWeek %> <img src="/img/filter-icon.svg" /></h3>
             <ul>
                 <li>
-                    <img class="strength-background" src="img/strength-icon.svg" />
+                    <img class="strength-background" src="/img/strength-icon.svg" />
                     <div>
                         <p>Day 1</p>
                         <h3>Chest & Back</h3>
                     </div>
-                    <img src="img/arrow-right.svg" />
+                    <img src="/img/arrow-right.svg" />
                 </li>
                 <li>
-                    <img class="cardio-background" src="img/cardio-icon.svg" />
+                    <img class="cardio-background" src="/img/cardio-icon.svg" />
                     <div>
                         <p>Day 2</p>
                         <h3>Plyometrics</h3>
                     </div>
-                    <img class="exercise-incomplete" src="img/arrow-right.svg" />
+                    <img class="exercise-incomplete" src="/img/arrow-right.svg" />
                 </li>
                 <li>
-                    <img class="strength-background" src="img/strength-icon.svg" />
+                    <img class="strength-background" src="/img/strength-icon.svg" />
                     <div>
                         <p>Day 3</p>
                         <h3>Shoulders & Arms</h3>
                     </div>
-                    <img class="exercise-incomplete" src="img/arrow-right.svg" />
+                    <img class="exercise-incomplete" src="/img/arrow-right.svg" />
                 </li>
                 <li>
-                    <img class="stretch-background" src="img/stretch-icon.svg" />
+                    <img class="stretch-background" src="/img/stretch-icon.svg" />
                     <div>
                         <p>Day 4</p>
                         <h3>Yoga X</h3>
                     </div>
-                    <img class="exercise-incomplete" src="img/arrow-right.svg" />
+                    <img class="exercise-incomplete" src="/img/arrow-right.svg" />
                 </li>
                 <li>
-                    <img class="strength-background" src="img/strength-icon.svg" />
+                    <img class="strength-background" src="/img/strength-icon.svg" />
                     <div>
                         <p>Day 5</p>
                         <h3>Legs & Back</h3>
                     </div>
-                    <img class="exercise-incomplete" src="img/arrow-right.svg" />
+                    <img class="exercise-incomplete" src="/img/arrow-right.svg" />
                 </li>
                 <li>
-                    <img class="cardio-background" src="img/cardio-icon.svg" />
+                    <img class="cardio-background" src="/img/cardio-icon.svg" />
                     <div>
                         <p>Day 6</p>
                         <h3>Kenpo X</h3>
                     </div>
-                    <img class="exercise-incomplete" src="img/arrow-right.svg" />
+                    <img class="exercise-incomplete" src="/img/arrow-right.svg" />
                 </li>
                 <li>
-                    <img class="rest-background" src="img/rest-icon.svg" />
+                    <img class="rest-background" src="/img/rest-icon.svg" />
                     <div>
                         <p>Day 7</p>
                         <h3>Rest / Stretch</h3>
                     </div>
-                    <img class="exercise-incomplete" src="img/arrow-right.svg" />
+                    <img class="exercise-incomplete" src="/img/arrow-right.svg" />
                 </li>
             </ul>
         </div>

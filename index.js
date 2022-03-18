@@ -10,6 +10,7 @@ app.use(express.static('public'));
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/p90x', { useNewUrlParser: true } );
 const User = require('./models/user');
+const Schedule = require('./models/schedule');
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -19,29 +20,24 @@ const expressSession = require('express-session');
 app.use(expressSession({ secret: 'keyboard cat' }));
 
 
-const schedule = [
-    [ { phase: '1', workouts: [ "Chest & Back + Ab Ripper X","Plyometrics","Shoulders & Arms + Ab Ripper X","Yoga X","Legs & Back + Ab Ripper X","Kenpo X","ResRest or X Stretcht" ] } ],
-    [ { phase: 1, workouts: [ "Chest & Back + Ab Ripper X","Plyometrics","Shoulders & Arms + Ab Ripper X","Yoga X","Legs & Back + Ab Ripper X","Kenpo X","Rest or X Stretch" ] } ],
-    [ { phase: 1, workouts: [ "Chest & Back + Ab Ripper X","Plyometrics","Shoulders & Arms + Ab Ripper X","Yoga X","Legs & Back + Ab Ripper X","Kenpo X","Rest or X Stretch" ] } ],
-    [ { phase: 1, workouts: [ "Yoga X","Core Synergistics","Kenpo X","X Stretch","Core Synergistics","Yoga X","Rest or X Stretch" ] } ],
-    [ { phase: 2, workouts: [ "Chest, Shoulders & Tricepts + Ab Ripper X","Plyometrics","Back & Biceps + Ab Ripper X","Yoga X","Legs & Back + Ab Ripper X","Kenpo X","Rest or X Stretch" ] } ],
-    [ { phase: 2, workouts: [ "Chest, Shoulders & Tricepts + Ab Ripper X","Plyometrics","Back & Biceps + Ab Ripper X","Yoga X","Legs & Back + Ab Ripper X","Kenpo X","Rest or X Stretch" ] } ],
-    [ { phase: 2, workouts: [ "Chest, Shoulders & Tricepts + Ab Ripper X","Plyometrics","Back & Biceps + Ab Ripper X","Yoga X","Legs & Back + Ab Ripper X","Kenpo X","Rest or X Stretch" ] } ],
-    [ { phase: 2, workouts: [ "Yoga X","Core Synergistics","Kenpo X","X Stretch","Core Synergistics","Yoga X","Rest or X Stretch" ] } ],
-    [ { phase: 3, workouts: [ "Chest & Back + Ab Ripper X","Plyometrics","Shoulders & Arms + Ab Ripper X","Yoga X","Legs & Back + Ab Ripper X","Kenpo X","ResRest or X Stretcht" ] } ],
-    [ { phase: 3, workouts: [ "Chest, Shoulders & Tricepts + Ab Ripper X","Plyometrics","Back & Biceps + Ab Ripper X","Yoga X","Legs & Back + Ab Ripper X","Kenpo X","Rest or X Stretch" ] } ],
-    [ { phase: 3, workouts: [ "Chest & Back + Ab Ripper X","Plyometrics","Shoulders & Arms + Ab Ripper X","Yoga X","Legs & Back + Ab Ripper X","Kenpo X","ResRest or X Stretcht" ] } ],
-    [ { phase: 3, workouts: [ "Chest, Shoulders & Tricepts + Ab Ripper X","Plyometrics","Back & Biceps + Ab Ripper X","Yoga X","Legs & Back + Ab Ripper X","Kenpo X","Rest or X Stretch" ] } ],
-    [ { phase: 3, workouts: [ "Yoga X","Core Synergistics","Kenpo X","X Stretch","Core Synergistics","Yoga X","Rest or X Stretch" ] } ],
-]
-
-
 app.listen(3000, () => {
     console.log('running');
 
     app.get('/', async (req, res) => {
-        const user = await User.find( { } );
-        const anna = user[0];
-        res.render('index', { anna, schedule });
+        const user = await User.find( { username: 'annasalinthone' } );
+        res.render('index', {user});
+    });
+    app.get('/u/:user', async (req, res) => {
+        const user = await User.find( { username: req.params.user } );
+        const schedule = await Schedule.find ( { week: user[0].progress.currentWeek } );
+        function findPhase(currentWeek) {
+            for (let i = 0; i < schedule.length; i++) {
+                let index = schedule[i].week.findIndex(week => week === currentWeek);
+                return index;
+            };
+        }
+
+        const scheduleObject = schedule[0];
+        res.render('index', {user, scheduleObject});
     });
 });
