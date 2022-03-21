@@ -3,10 +3,7 @@ const Schema = mongoose.Schema;
 
 const ScheduleSchema = new Schema ( {
     week: [],
-    exercise: [{
-        type: String,
-        workout: []
-    }],
+    exercises: [],
 });
 
 const Schedule = mongoose.model('Schedule', ScheduleSchema);

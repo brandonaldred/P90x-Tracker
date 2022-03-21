@@ -27,17 +27,21 @@ app.listen(3000, () => {
         const user = await User.find( { username: 'annasalinthone' } );
         res.render('index', {user});
     });
-    app.get('/u/:user', async (req, res) => {
-        const user = await User.find( { username: req.params.user } );
-        const schedule = await Schedule.find ( { week: user[0].progress.currentWeek } );
-        function findPhase(currentWeek) {
-            for (let i = 0; i < schedule.length; i++) {
-                let index = schedule[i].week.findIndex(week => week === currentWeek);
-                return index;
-            };
-        }
+    app.get('/w/:user', async (req, res) => {
+        let user = await User.find( { username: req.params.user } );
+        userFirstName = user[0].firstName;
+        userCurrentWeek = user[0].progress.currentWeek;
+        userCurrentDay = user[0].progress.currentDay;
+        userPhase = user[0].progress.currentPhase;
+        userProfileImage = user[0].profileImage;
 
-        const scheduleObject = schedule[0];
-        res.render('index', {user, scheduleObject});
+        const workoutIndex = userCurrentDay -1;
+        let schedule = await Schedule.find ( { week: userCurrentWeek } );
+        schedule = schedule[0].exercises;
+
+        const nextWorkoutType = schedule[workoutIndex].type
+        const nextWorkout = schedule[workoutIndex].workout
+
+        res.render('index', {userFirstName, userProfileImage, userCurrentWeek, userCurrentDay, userPhase, nextWorkoutType, nextWorkout, schedule});
     });
 });
