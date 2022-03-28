@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P90x Workout Tracker</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="main-container">
-        <header>
-            <p>P90x Tracker</p>
-            <p><%- userFirstName -%><img src="<%- userProfileImage -%>" /></p>
-        </header>
+<%- include('layouts/user-header.ejs'); %>
+
         <div id="up-coming-workout">
             <div class="next-workout-card <%= nextWorkoutType.toLowerCase() + '-background' %>">
                 <div class="next-workout-day">
@@ -27,7 +11,7 @@
                     <div class="<%= nextWorkoutType.toLowerCase() + '-background' %> workout-icon-top">
                         <img src="<%= '/img/' + nextWorkoutType.toLowerCase() + '-icon.svg' %>" />
                     </div>
-                    <a href="workout.html">
+                    <a href="/<%= nextWorkout[0] %>">
                         <h3 class="<%= nextWorkoutType.toLowerCase() + '-font' %>"><%= nextWorkout[0] %></h3>
                         <p>Start Workout ></p>
                     </a>
@@ -37,9 +21,8 @@
         <div class="phase-workouts">
             <h3 class="phase-header">Phase <%- userPhase %> | Week <%- userCurrentWeek %> <img src="/img/filter-icon.svg" /></h3>
             <ul>
-
                 <% for (let i = 0; i < schedule.length; i ++) { %>
-                    <li>
+                    <li data-workout="<%= schedule[i].workout[0] %>" data-username="<%= username %>">
                         <img class="<%- schedule[i].type.toLowerCase() + '-background' %>" src="<%= '/img/' + schedule[i].type.toLowerCase() + '-icon.svg' %>" />
                         <div>
                             <p><%= 'Day ' + (i + 1) %></p>
@@ -48,10 +31,8 @@
                         <img class="exercise-incomplete" src="/img/arrow-right.svg" />
                     </li>
                 <% } %>
-
-
             </ul>
         </div>
     </div>
-</body>
-</html>
+
+<%- include ('layouts/user-schedule-footer.ejs'); %>

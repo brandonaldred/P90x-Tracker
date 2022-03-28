@@ -19,29 +19,33 @@ app.use(bodyParser.urlencoded({extended: true}));
 const expressSession = require('express-session');
 app.use(expressSession({ secret: 'keyboard cat' }));
 
-
 app.listen(3000, () => {
     console.log('running');
 
     app.get('/', async (req, res) => {
         const user = await User.find( { username: 'annasalinthone' } );
-        res.render('index', {user});
+        res.render('workout', { user });
     });
-    app.get('/w/:user', async (req, res) => {
-        let user = await User.find( { username: req.params.user } );
+
+    app.get('/s/:user', async (req, res) => {
+        let username = req.params.user;
+        let user = await User.find( { username: username } );
         userFirstName = user[0].firstName;
         userCurrentWeek = user[0].progress.currentWeek;
         userCurrentDay = user[0].progress.currentDay;
         userPhase = user[0].progress.currentPhase;
         userProfileImage = user[0].profileImage;
+        let schedule = await Schedule.find ( { week: userCurrentWeek } );
 
         const workoutIndex = userCurrentDay -1;
-        let schedule = await Schedule.find ( { week: userCurrentWeek } );
         schedule = schedule[0].exercises;
-
+        
         const nextWorkoutType = schedule[workoutIndex].type
         const nextWorkout = schedule[workoutIndex].workout
+        res.render('index', {username, userFirstName, userProfileImage, userCurrentWeek, userCurrentDay, userPhase, nextWorkoutType, nextWorkout, schedule});
+    });
 
-        res.render('index', {userFirstName, userProfileImage, userCurrentWeek, userCurrentDay, userPhase, nextWorkoutType, nextWorkout, schedule});
+    app.get('/w/:user/:workout', async (req, res) => {
+
     });
 });
