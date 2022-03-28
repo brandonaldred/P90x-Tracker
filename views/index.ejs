@@ -12,7 +12,7 @@
                         <img src="<%= '/img/' + nextWorkoutType.toLowerCase() + '-icon.svg' %>" />
                     </div>
                     <a href="/<%= nextWorkout[0] %>">
-                        <h3 class="<%= nextWorkoutType.toLowerCase() + '-font' %>"><%= nextWorkout[0] %></h3>
+                        <h3 class="<%= nextWorkoutType.toLowerCase() + '-font' %>"><%= nextWorkout[0][1] %></h3>
                         <p>Start Workout ></p>
                     </a>
                 </div>
@@ -26,7 +26,7 @@
                         <img class="<%- schedule[i].type.toLowerCase() + '-background' %>" src="<%= '/img/' + schedule[i].type.toLowerCase() + '-icon.svg' %>" />
                         <div>
                             <p><%= 'Day ' + (i + 1) %></p>
-                            <h3><%= schedule[i].workout[0] %></h3>
+                            <h3><%= schedule[i].workout[0][1] %></h3>
                         </div>
                         <img class="exercise-incomplete" src="/img/arrow-right.svg" />
                     </li>
