@@ -22,11 +22,11 @@
             <h3 class="phase-header">Phase <%- userPhase %> | Week <%- userCurrentWeek %> <img src="/img/filter-icon.svg" /></h3>
             <ul>
                 <% for (let i = 0; i < schedule.length; i ++) { %>
-                    <li data-workout="<%= schedule[i].workout[0] %>" data-username="<%= username %>">
+                    <li data-workout="<%= schedule[i].workout[0].workoutId %>" data-username="<%= username %>">
                         <img class="<%- schedule[i].type.toLowerCase() + '-background' %>" src="<%= '/img/' + schedule[i].type.toLowerCase() + '-icon.svg' %>" />
                         <div>
                             <p><%= 'Day ' + (i + 1) %></p>
-                            <h3><%= schedule[i].workout[0][1] %></h3>
+                            <h3><%= schedule[i].workout[0].workoutName %><% if(schedule[i].workout[1]) { %><%= ` | ${schedule[i].workout[1].workoutName}` %><% } %></h3>
                         </div>
                         <img class="exercise-incomplete" src="/img/arrow-right.svg" />
                     </li>

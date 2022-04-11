@@ -1,0 +1,214 @@
+[{
+  "_id": {
+    "$oid": "62330f3c1ba4e5d5e8f633a5"
+  },
+  "Workout": "Chest & Back",
+  "Exercises": [
+    "Standard Push-Ups",
+    "Wide Front Pull-Ups",
+    "Military Push-Ups",
+    "Reverse Grip Chin-Ups",
+    "Wide Fly Push-Ups",
+    "Closed Grip Overhand Pull-Ups",
+    "Decline Push-Ups",
+    "Heavy Pants",
+    "Diamond Push-Ups",
+    "Lawnmowers",
+    "Dive-Bomber Push-Ups",
+    "Back Flys",
+    "Wide Front Pull-Ups",
+    "Standard Push-Ups",
+    "Reverse Grip Chin-Ups",
+    "Military Push-Ups",
+    "Closed Grip Overhand Pull-Ups",
+    "Wide Fly Push-Ups",
+    "Heavy Pants",
+    "Decline Push-Ups",
+    "Lawnmowers",
+    "Diamond Push-Ups",
+    "Back Flys",
+    "Dive-Bomber Push-Ups"
+  ]
+},{
+  "_id": {
+    "$oid": "62330f3c1ba4e5d5e8f633a6"
+  },
+  "Workout": "Shoulders & Arms",
+  "Exercises": [
+    "Alternating Shoulder Presses",
+    "In & Out Bicep Curls",
+    "Two-Arm Triceps Kickback",
+    "Alternating Shoulder Presses",
+    "In & Out Bicep Curls",
+    "Two-Arm Triceps Kickback",
+    "Deep Swimmer Presses",
+    "Full Supination Concentration Curls",
+    "Chair Dips",
+    "Deep Swimmers Press",
+    "Full Supination Concentration Curls",
+    "Chair Dips",
+    "Upright Rows",
+    "Static Arm Curls",
+    "Flip-Grip Twist Triceps Kickbacks",
+    "Upright Rows",
+    "Static Arm Curls",
+    "Flip-Grip Twist Triceps Kickbacks",
+    "Seated Two-Angle Shoulder Flys",
+    "Crouching Cohen Curls",
+    "Lying-Down Triceps Extensions",
+    "Seated Two-Angle Shoulder Flys",
+    "Crouching Cohen Curls",
+    "Lying-Down Triceps Extensions",
+    "In & Out Straight-Arm Shoulder Flys",
+    "Congdon Curls",
+    "Side Tri-Rises",
+    "In & Out Straight-Arm Shoulder Flys",
+    "Congdon Curls",
+    "Side Tri-Rises"
+  ]
+},{
+  "_id": {
+    "$oid": "62330f3c1ba4e5d5e8f633a7"
+  },
+  "Workout": "Legs & Back",
+  "Exercises": [
+    "Balanced Lunges",
+    "Calf-Raise Squats",
+    "Reverse Grip Chin-Ups",
+    "Super Skaters",
+    "Wall Squats",
+    "Wide Front Pull-Ups",
+    "Step Back Lunge",
+    "Alternating Side Lunge",
+    "Closed Grip Overhead Pull-Ups",
+    "Single-Leg Wall Squat",
+    "Deadlift Squats",
+    "Switch Grip Pull-Ups",
+    "Three-Way Lunge",
+    "Sneaky Lunge",
+    "Reverse Grip Chin-Ups",
+    "Chair Salutations",
+    "Toe-Roll Iso Lunge",
+    "Wide Front Pull-Ups",
+    "Groucho Walk",
+    "Calf Raises Toes Out",
+    "Calf Raises Feet Parallel",
+    "Calf Raises Toes In",
+    "Closed Grip Overhand Pull-Ups",
+    "80/20 Siebers-Speed Squats",
+    "Switch Grip Pull-Ups"
+  ]
+},{
+  "_id": {
+    "$oid": "62330f3c1ba4e5d5e8f633a8"
+  },
+  "Workout": "Core Synergistics",
+  "Exercises": [
+    "Stacked Foot / Staggered Hands Push-Ups",
+    "Banana Rolls",
+    "Leaning Crescent Lunges",
+    "Squat Runs",
+    "Sphinx Push-Ups",
+    "Bow to Boat",
+    "Low Lateral Skaters",
+    "Lunge & Reach",
+    "Prison Cell Push-Ups",
+    "Side Hip Raise",
+    "Squat X-Press",
+    "Plank to Chaturanga Run",
+    "Walking Push-Ups",
+    "Superman Banana",
+    "Lunge Kickback Curl Press",
+    "Towel Hoppers",
+    "Reach High & Under Push-Ups",
+    "Steam Engine",
+    "Dreya Rolls",
+    "Plan to Chaturanga Iso",
+    "Halfback",
+    "Table Dip Leg Raises"
+  ]
+},{
+  "_id": {
+    "$oid": "62330f3c1ba4e5d5e8f633a9"
+  },
+  "Workout": "Chest, Shoudlers & Tricepts",
+  "Exercises": [
+    "Slow-Motion 3-in-1 Push-Ups",
+    "In & Out Shoulder Flys",
+    "Chair Dips",
+    "Plange Push-Ups",
+    "Pike Presses",
+    "Side Tri-Rises",
+    "Floor Flys",
+    "Scarecrows",
+    "Overhead Triceps Extensions",
+    "Two-Twitch Speed Push-Ups",
+    "Y-Presses",
+    "Lying Triceps Extensions",
+    "Side-to-Side Push-Ups",
+    "Pour Flys",
+    "Side-Leaning Triceps Extensions",
+    "One-Arm Push-Ups",
+    "weighted Circles",
+    "Throw the Bomb",
+    "Clap or Plyo Push-Ups",
+    "Slo-Mo Throws",
+    "Front-to-Back Triceps Extensions",
+    "One-Arm Balance Push-Ups",
+    "Fly-Row-Presses",
+    "Dumbbell Cross-Body Blows"
+  ]
+},{
+  "_id": {
+    "$oid": "62330f3c1ba4e5d5e8f633aa"
+  },
+  "Workout": "Back & Biceps",
+  "Exercises": [
+    "Wide Front Pull-Ups",
+    "Lawnmowers",
+    "Twenty-Ones",
+    "One-Arm Cross-Body Curls",
+    "Switch Grip Pull-Ups",
+    "Elbows-Out Lawnmowers",
+    "Standing Bicep Curls",
+    "One-Arm Concentration Curls",
+    "Corn Cob Pull-Ups",
+    "Reverse Grip Bent-Over Rows",
+    "Open-Arm Curls",
+    "Static-Arm Curls",
+    "Towel Pull-Ups",
+    "Congdon Locomotives",
+    "Crouching Cohen Curls",
+    "One-Arm Corkscrew Curls",
+    "Chin-Ups",
+    "Seated Bent-Over Back Flys",
+    "Curl-Up/Hammer Downs",
+    "Hammer Curls",
+    "Max Rep Pull-Ups",
+    "Superman",
+    "In-Out Hammer Curls",
+    "Strip-Set Curls",
+    "Strip-Set Curls",
+    "Strip-Set Curls",
+    "Strip-Set Curls"
+  ]
+},{
+  "_id": {
+    "$oid": "62330f3c1ba4e5d5e8f633ab"
+  },
+  "Workout": "AB Ripper X",
+  "Exercises": [
+    "In & Outs",
+    "Seated Bicycles",
+    "Reverse Bicycles",
+    "Seated Crunchy Frogs",
+    "Crossed Leg/Wide Leg Sit-Ups",
+    "Fifer Scissors",
+    "Hip Rock N Raise",
+    "Pulse-Ups",
+    "Roll-Up/V-Up Combos",
+    "Oblique V-Ups",
+    "Leg Climbs",
+    "Mason Twist"
+  ]
+}]

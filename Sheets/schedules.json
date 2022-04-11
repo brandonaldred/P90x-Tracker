@@ -1,0 +1,263 @@
+[{
+  "_id": {
+    "$oid": "623314621ba4e5d5e8f633ba"
+  },
+  "week": [
+    1,
+    2,
+    3,
+    9,
+    11
+  ],
+  "exercises": [
+    {
+      "type": "Strength",
+      "workout": [
+          {
+            "workoutId": "62330f3c1ba4e5d5e8f633a5",
+            "workoutName": "Chest & Back"
+          },
+          {
+            "workoutId": "62330f3c1ba4e5d5e8f633ab",
+            "workoutName": "AB Ripper X"
+          }
+      ]
+    },
+    {
+      "type": "Cardio",
+      "workout": [
+        {
+          "workoutId": "",
+          "workoutName": "Plyometrics"
+        }
+      ]
+    },
+    {
+      "type": "Strength",
+      "workout": [
+        {
+          "workoutId": "62330f3c1ba4e5d5e8f633a6",
+          "workoutName": "Shoulders & Arms"
+        },
+        {
+          "workoutId": "62330f3c1ba4e5d5e8f633ab",
+          "workoutName": "AB Ripper X"
+        }
+      ]
+    },
+    {
+      "type": "Stretch",
+      "workout": [
+        {
+          "workoutId": "",
+          "workoutName": "Yoga X"
+        }
+      ]
+    },
+    {
+      "type": "Strength",
+      "workout": [
+        {
+          "workoutId": "62330f3c1ba4e5d5e8f633a7",
+          "workoutName": "Legs & Back"
+        },
+        {
+          "workoutId": "62330f3c1ba4e5d5e8f633ab",
+          "workoutName": "AB Ripper X"
+        }
+      ]
+    },
+    {
+      "type": "Cardio",
+      "workout": [
+        {
+          "workoutId": "",
+          "workoutName": "Kenpo X"
+        }
+      ]
+    },
+    {
+      "type": "Rest",
+      "workout": [
+        {
+          "workoutId": "",
+          "workoutName": "Rest"
+        },
+        {
+          "workoutId": "",
+          "workoutName": "X Stretch"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "623314621ba4e5d5e8f633bb"
+  },
+  "week": [
+    4,
+    8,
+    13
+  ],
+  "exercises": [
+    {
+      "type": "Stretch",
+      "workout": [
+        {
+          "workoutId": "",
+          "workoutName": "Yoga X"
+        }
+      ]
+    },
+    {
+      "type": "Core",
+      "workout": [
+        {
+          "workoutId": "62330f3c1ba4e5d5e8f633a8",
+          "workoutName": "Core Synergistics"
+        }
+      ]
+    },
+    {
+      "type": "Cardio",
+      "workout": [
+        {
+          "workoutId": "",
+          "workoutName": "Kenpo X"
+        }
+      ]
+    },
+    {
+      "type": "Stretch",
+      "workout": [
+        {
+          "workoutId": "",
+          "workoutName": "X Stretch"
+        }
+      ]
+    },
+    {
+      "type": "Core",
+      "workout": [
+        {
+          "workoutId": "62330f3c1ba4e5d5e8f633a8",
+          "workoutName": "Core Synergistics"
+        }
+      ]
+    },
+    {
+      "type": "Stretch",
+      "workout": [
+        {
+          "workoutId": "",
+          "workoutName": "Yoga X"
+        }
+      ]
+    },
+    {
+      "type": "Rest",
+      "workout": [
+        {
+          "workoutId": "",
+          "workoutName": "Rest"
+        },
+        {
+          "workoutId": "",
+          "workoutName": "X Stretch"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "623314621ba4e5d5e8f633bc"
+  },
+  "week": [
+    5,
+    6,
+    7,
+    10,
+    12
+  ],
+  "exercises": [
+    {
+      "type": "Strength",
+      "workout": [
+        {
+          "workoutId": "62330f3c1ba4e5d5e8f633a9",
+          "workoutName": "Chest, Shoudlers & Tricepts"
+        },
+        {
+          "workoutId": "62330f3c1ba4e5d5e8f633ab",
+          "workoutName": "AB Ripper X"
+        }
+      ]
+    },
+    {
+      "type": "Cardio",
+      "workout": [
+        {
+          "workoutId": "",
+          "workoutName": "Plyometrics"
+        }
+      ]
+    },
+    {
+      "type": "Strength",
+      "workout": [
+        {
+          "workoutId": "62330f3c1ba4e5d5e8f633aa",
+          "workoutName": "Back & Biceps"
+        },
+        {
+          "workoutId": "62330f3c1ba4e5d5e8f633ab",
+          "workoutName": "AB Ripper X"
+        }
+      ]
+    },
+    {
+      "type": "Stretch",
+      "workout": [
+        {
+          "workoutId": "",
+          "workoutName": "Yoga X"
+        }
+      ]
+    },
+    {
+      "type": "Strength",
+      "workout": [
+        {
+          "workoutId": "62330f3c1ba4e5d5e8f633a7",
+          "workoutName": "Legs & Back"
+        },
+        {
+          "workoutId": "62330f3c1ba4e5d5e8f633ab",
+          "workoutName": "AB Ripper X"
+        }
+      ]
+    },
+    {
+      "type": "Cardio",
+      "workout": [
+        {
+          "workoutId": "",
+          "workoutName": "Kenpo X"
+        }
+      ]
+    },
+    {
+      "type": "Rest",
+      "workout": [
+        {
+          "workoutId": "",
+          "workoutName": "Rest"
+        },
+        {
+          "workoutId": "",
+          "workoutName": "X Stretch"
+        }
+      ]
+    }
+  ]
+}]
