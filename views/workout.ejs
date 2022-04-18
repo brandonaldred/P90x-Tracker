@@ -1,7 +1,7 @@
 <%- include('layouts/user-header.ejs'); %>
         <div class="workout-header strength-background dark-gray-font">
             <h2><%- workoutName %></h2>
-            <p>Phase # <img class="workout-header-icon invert" src="/img/calendar-icon.svg" />Day #</p>
+            <p>Phase: <%- userPhase %> <img class="workout-header-icon invert" src="/img/calendar-icon.svg" />Day <%- userCurrentDay %></p>
         </div>
         <div id="exercise-container">
             <div class="exercise-header">
@@ -17,7 +17,7 @@
                     <div class="decrease">&#8722;</div>
                 </div>
                 <div class="weight-reps">
-                    <p class="count">0</p>
+                    <input type="number" placeholder="0" class="count" />
                     <p>weight</p>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                     <div class="decrease">&#8722;</div>
                 </div>
                 <div class="weight-reps">
-                    <p class="count">0</p>
+                    <input type="number" placeholder="0" class="count" />
                     <p>Reps</p>
                 </div>
             </div>
@@ -54,12 +54,12 @@
         <div class="phase-workouts">
             <h3 class="phase-header">Full Workout <img src="/img/filter-icon.svg" /></h3>
             <ul>
-                <% for (let i = 0; i < workoutExercises.length; i++) { %>
+                <% for (let i = 0; i < exercises.length; i++) { %>
                     <li class="exercise-lower-list">
                         <p class="exercise-number"><%= (i + 1) %></p>
                         <div>
-                            <p class="exercise-muscle-group">Chest</p>
-                            <h3><%= workoutExercises[i] %></h3>
+                            <p class="exercise-muscle-group"><%= exercises[i].muscleGroup %></p>
+                            <h3><%= exercises[i].exercise %></h3>
                         </div>
                         <img class="" src="/img/check-icon.svg" />
                     </li>

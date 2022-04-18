@@ -11,7 +11,7 @@
                     <div class="<%= nextWorkoutType.toLowerCase() + '-background' %> workout-icon-top">
                         <img src="<%= '/img/' + nextWorkoutType.toLowerCase() + '-icon.svg' %>" />
                     </div>
-                    <a href="/<%= nextWorkout[0] %>">
+                    <a href="/<%= username %>/<%=nextWorkout[0].workoutId %>">
                         <h3 class="<%= nextWorkoutType.toLowerCase() + '-font' %>"><%= nextWorkout[0][1] %></h3>
                         <p>Start Workout ></p>
                     </a>

@@ -359,7 +359,28 @@ header img {
     font-size: var(--xx-large);
     font-weight: 800;
     border-bottom: solid 1px var(--white);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background: none;
+    color: var(--white);
+    width: 100%;
 }
+
+.count:focus {
+    outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.count::-webkit-outer-spin-button,
+.count::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.count[type=number] {
+    -moz-appearance: textfield;
+  }
 
 .button-container {
     width: 50px;
