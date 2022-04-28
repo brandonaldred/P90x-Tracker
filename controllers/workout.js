@@ -8,6 +8,7 @@ module.exports = async (req, res) => {
     let user = await User.find({
         username: username
     });
+    console.log(user);
     let userFirstName = user[0].firstName;
     let userCurrentWeek = user[0].progress.currentWeek;
     let userCurrentDay = user[0].progress.currentDay;
@@ -25,7 +26,7 @@ module.exports = async (req, res) => {
         exercise: workoutExercisesList
     });
 
-    console.log(exercises);
+    console.log();
 
     res.render('workout', {
         username,

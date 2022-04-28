@@ -3,25 +3,25 @@
             <h2><%- workoutName %></h2>
             <p>Phase: <%- userPhase %> <img class="workout-header-icon invert" src="/img/calendar-icon.svg" />Day <%- userCurrentDay %></p>
         </div>
-        <div id="exercise-container">
+        <div id="exercise-container" data-content="3">
             <div class="exercise-header">
-                <p class="exercise-number">16</p>
+                <p class="exercise-number">1</p>
                 <div>
-                    <p class="exercise-muscle-group">Muscle Group</p>
-                    <h3>Standard Push-Ups</h3>
+                    <p class="exercise-muscle-group"><%- exercises[0].muscleGroup %></p>
+                    <h3><%- exercises[0].exercise %></h3>
                 </div>
             </div>
             <div class="counter-container">
                 <div class="button-container">
-                    <div class="increase">+</div>
-                    <div class="decrease">&#8722;</div>
+                    <div class="increase increase-decrease-button">+</div>
+                    <div class="increase-decrease-button">&#8722;</div>
                 </div>
                 <div class="weight-reps">
                     <input type="number" placeholder="0" class="count" />
                     <p>weight</p>
                 </div>
             </div>
-            <div class="qty-quick-select">
+            <!-- <div class="qty-quick-select">
                 <ul>
                     <li>5</li>
                     <li>10</li>
@@ -29,18 +29,18 @@
                     <li>20</li>
                     <li>25</li>
                 </ul>
-            </div>
+            </div> -->
             <div class="counter-container">
                 <div class="button-container">
-                    <div class="increase">+</div>
-                    <div class="decrease">&#8722;</div>
+                    <div class="increase increase-decrease-button">+</div>
+                    <div class="increase-decrease-button">&#8722;</div>
                 </div>
                 <div class="weight-reps">
                     <input type="number" placeholder="0" class="count" />
                     <p>Reps</p>
                 </div>
             </div>
-            <div class="qty-quick-select">
+            <!-- <div class="qty-quick-select">
                 <ul>
                     <li>5</li>
                     <li>10</li>
@@ -48,23 +48,29 @@
                     <li>20</li>
                     <li>25</li>
                 </ul>
-            </div>
+            </div> -->
             <a class="strength-background" href="#">Next</a>
         </div>
         <div class="phase-workouts">
             <h3 class="phase-header">Full Workout <img src="/img/filter-icon.svg" /></h3>
             <ul>
                 <% for (let i = 0; i < exercises.length; i++) { %>
-                    <li class="exercise-lower-list">
+                    <li class="exercise-lower-list"
+                        <% if (exercises[i].weight) { %> data-weight="0" <% } %>
+                        <% if (exercises[i].reps) { %> data-reps="0" <% } %>
+                        <% if (exercises[i].time) { %> data-time="0" <% } %>
+                        data-complete="0"
+                        >
                         <p class="exercise-number"><%= (i + 1) %></p>
                         <div>
                             <p class="exercise-muscle-group"><%= exercises[i].muscleGroup %></p>
                             <h3><%= exercises[i].exercise %></h3>
                         </div>
-                        <img class="" src="/img/check-icon.svg" />
+                        <img class="" src="/img/incomplete-check-icon.svg" />
                     </li>
                 <% } %>
             </ul>
     </div>
     </div>
-f<%- include ('layouts/general-footer.ejs'); %>
+<script src="/js/repsWeightCounter.js"></script>
+<%- include ('layouts/general-footer.ejs'); %>
