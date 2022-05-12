@@ -46,10 +46,10 @@
                     <li>10</li>
                     <li>15</li>
                     <li>20</li>
-                    <li>25</li>
+   S                 <li>25</li>
                 </ul>
             </div> -->
-            <a class="strength-background" href="#">Next</a>
+            <a class="strength-background" href="">Next</a>
         </div>
         <div class="phase-workouts">
             <h3 class="phase-header">Full Workout <img src="/img/filter-icon.svg" /></h3>
@@ -59,18 +59,18 @@
                         <% if (exercises[i].weight) { %> data-weight="0" <% } %>
                         <% if (exercises[i].reps) { %> data-reps="0" <% } %>
                         <% if (exercises[i].time) { %> data-time="0" <% } %>
-                        data-complete="0"
                         >
                         <p class="exercise-number"><%= (i + 1) %></p>
                         <div>
                             <p class="exercise-muscle-group"><%= exercises[i].muscleGroup %></p>
                             <h3><%= exercises[i].exercise %></h3>
                         </div>
-                        <img class="" src="/img/incomplete-check-icon.svg" />
+                        <img src="/img/incomplete-check-icon.svg" />
                     </li>
                 <% } %>
             </ul>
     </div>
     </div>
 <script src="/js/repsWeightCounter.js"></script>
+<script src="/js/cycleWorkout.js"></script>
 <%- include ('layouts/general-footer.ejs'); %>
