@@ -26,8 +26,6 @@ module.exports = async (req, res) => {
         exercise: workoutExercisesList
     });
 
-    console.log();
-
     res.render('workout', {
         username,
         userFirstName,
